@@ -1,0 +1,4 @@
+create_disk 524288 virtual_disk
+load_vdisk virtual_disk
+show_vdisk_map
+exit

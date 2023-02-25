@@ -1,0 +1,94 @@
+load_vdisk virtual_disk
+copy_to_vdisk sf.txt f_0.txt
+copy_to_vdisk sf.txt f_1.txt
+copy_to_vdisk sf.txt f_2.txt
+copy_to_vdisk sf.txt f_3.txt
+copy_to_vdisk sf.txt f_4.txt
+copy_to_vdisk sf.txt f_5.txt
+copy_to_vdisk sf.txt f_6.txt
+copy_to_vdisk sf.txt f_7.txt
+copy_to_vdisk sf.txt f_8.txt
+copy_to_vdisk sf.txt f_9.txt
+copy_to_vdisk sf.txt f_10.txt
+copy_to_vdisk sf.txt f_11.txt
+copy_to_vdisk sf.txt f_12.txt
+copy_to_vdisk sf.txt f_13.txt
+copy_to_vdisk sf.txt f_14.txt
+copy_to_vdisk sf.txt f_15.txt
+copy_to_vdisk sf.txt f_16.txt
+copy_to_vdisk sf.txt f_17.txt
+copy_to_vdisk sf.txt f_18.txt
+copy_to_vdisk sf.txt f_19.txt
+copy_to_vdisk sf.txt f_20.txt
+copy_to_vdisk sf.txt f_21.txt
+copy_to_vdisk sf.txt f_22.txt
+copy_to_vdisk sf.txt f_23.txt
+copy_to_vdisk sf.txt f_24.txt
+copy_to_vdisk sf.txt f_25.txt
+copy_to_vdisk sf.txt f_26.txt
+copy_to_vdisk sf.txt f_27.txt
+copy_to_vdisk sf.txt f_28.txt
+copy_to_vdisk sf.txt f_29.txt
+copy_to_vdisk sf.txt f_30.txt
+copy_to_vdisk sf.txt f_31.txt
+copy_to_vdisk sf.txt f_32.txt
+copy_to_vdisk sf.txt f_33.txt
+copy_to_vdisk sf.txt f_34.txt
+copy_to_vdisk sf.txt f_35.txt
+copy_to_vdisk sf.txt f_36.txt
+copy_to_vdisk sf.txt f_37.txt
+copy_to_vdisk sf.txt f_38.txt
+copy_to_vdisk sf.txt f_39.txt
+copy_to_vdisk sf.txt f_40.txt
+copy_to_vdisk sf.txt f_41.txt
+copy_to_vdisk sf.txt f_42.txt
+copy_to_vdisk sf.txt f_43.txt
+copy_to_vdisk sf.txt f_44.txt
+copy_to_vdisk sf.txt f_45.txt
+copy_to_vdisk sf.txt f_46.txt
+copy_to_vdisk sf.txt f_47.txt
+copy_to_vdisk sf.txt f_48.txt
+copy_to_vdisk sf.txt f_49.txt
+copy_to_vdisk sf.txt f_50.txt
+copy_to_vdisk sf.txt f_51.txt
+copy_to_vdisk sf.txt f_52.txt
+copy_to_vdisk sf.txt f_53.txt
+copy_to_vdisk sf.txt f_54.txt
+show_vdisk_map
+show_catalog
+delete_file f_0.txt
+delete_file f_2.txt
+delete_file f_4.txt
+delete_file f_6.txt
+delete_file f_8.txt
+delete_file f_10.txt
+delete_file f_12.txt
+delete_file f_14.txt
+delete_file f_16.txt
+delete_file f_18.txt
+delete_file f_20.txt
+delete_file f_22.txt
+delete_file f_24.txt
+delete_file f_26.txt
+delete_file f_28.txt
+delete_file f_30.txt
+delete_file f_32.txt
+delete_file f_34.txt
+delete_file f_36.txt
+delete_file f_38.txt
+delete_file f_40.txt
+delete_file f_42.txt
+delete_file f_44.txt
+delete_file f_46.txt
+delete_file f_48.txt
+delete_file f_50.txt
+delete_file f_52.txt
+delete_file f_54.txt
+show_vdisk_map
+show_catalog
+copy_to_vdisk img.png img.png
+show_vdisk_map
+show_catalog
+copy_from_vdisk img.png test2.png
+delete_vdisk virtual_disk
+exit

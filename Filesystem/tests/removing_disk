@@ -1,0 +1,3 @@
+load_vdisk virtual_disk
+delete_vdisk virtual_disk
+exit

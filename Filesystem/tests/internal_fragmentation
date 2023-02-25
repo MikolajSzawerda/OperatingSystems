@@ -1,0 +1,55 @@
+create_disk 524288 virtual_disk
+load_vdisk virtual_disk
+copy_to_vdisk mf.txt f_0.txt
+copy_to_vdisk mf.txt f_1.txt
+copy_to_vdisk mf.txt f_2.txt
+copy_to_vdisk mf.txt f_3.txt
+copy_to_vdisk mf.txt f_4.txt
+copy_to_vdisk mf.txt f_5.txt
+copy_to_vdisk mf.txt f_6.txt
+copy_to_vdisk mf.txt f_7.txt
+copy_to_vdisk mf.txt f_8.txt
+copy_to_vdisk mf.txt f_9.txt
+copy_to_vdisk mf.txt f_10.txt
+copy_to_vdisk mf.txt f_11.txt
+copy_to_vdisk mf.txt f_12.txt
+copy_to_vdisk mf.txt f_13.txt
+copy_to_vdisk mf.txt f_14.txt
+copy_to_vdisk mf.txt f_15.txt
+copy_to_vdisk mf.txt f_16.txt
+copy_to_vdisk mf.txt f_17.txt
+copy_to_vdisk mf.txt f_18.txt
+copy_to_vdisk mf.txt f_19.txt
+copy_to_vdisk mf.txt f_20.txt
+copy_to_vdisk mf.txt f_21.txt
+copy_to_vdisk mf.txt f_22.txt
+copy_to_vdisk mf.txt f_23.txt
+copy_to_vdisk mf.txt f_24.txt
+copy_to_vdisk mf.txt f_25.txt
+copy_to_vdisk mf.txt f_26.txt
+copy_to_vdisk mf.txt f_27.txt
+copy_to_vdisk mf.txt f_28.txt
+copy_to_vdisk mf.txt f_29.txt
+copy_to_vdisk mf.txt f_30.txt
+copy_to_vdisk mf.txt f_31.txt
+copy_to_vdisk mf.txt f_32.txt
+copy_to_vdisk mf.txt f_33.txt
+copy_to_vdisk mf.txt f_34.txt
+copy_to_vdisk mf.txt f_35.txt
+copy_to_vdisk mf.txt f_36.txt
+copy_to_vdisk mf.txt f_37.txt
+copy_to_vdisk mf.txt f_38.txt
+copy_to_vdisk mf.txt f_39.txt
+copy_to_vdisk mf.txt f_40.txt
+copy_to_vdisk mf.txt f_41.txt
+copy_to_vdisk mf.txt f_42.txt
+copy_to_vdisk mf.txt f_43.txt
+copy_to_vdisk mf.txt f_44.txt
+copy_to_vdisk mf.txt f_45.txt
+copy_to_vdisk mf.txt f_46.txt
+copy_to_vdisk mf.txt f_47.txt
+copy_to_vdisk mf.txt f_48.txt
+copy_to_vdisk mf.txt f_49.txt
+show_vdisk_map
+show_catalog
+exit

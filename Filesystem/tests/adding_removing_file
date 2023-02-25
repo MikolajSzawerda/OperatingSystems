@@ -1,0 +1,11 @@
+create_disk 524288 virtual_disk
+load_vdisk virtual_disk
+copy_to_vdisk bf.txt test.txt
+copy_to_vdisk bf.txt test.txt
+show_vdisk_map
+show_catalog
+copy_from_vdisk test.txt copied_file.txt
+delete_file test.txt
+show_vdisk_map
+show_catalog
+exit

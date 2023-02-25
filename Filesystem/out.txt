@@ -1,0 +1,868 @@
+ninja: no work to do.
+FILESYSTEM COMPILED
+RUNNING TESTS
+
+██████████████████████████████████████████████████████████████████████████
+TEST 1 - creating and removing virtual disk
+Available blocks: 128
+Max file count: 3872
+Max file size: 516096
+Max data blocks per file: 126
+Max catalog descriptors: 121
+Max files in catalog descriptors: 32
+DISK CREATED SUCCESSFULLY!
+DISK LOADED SUCCESSFULLY
+|------------------------------------------------------------------------|
+|ID: 0    |Type: super block         |SPACE:        384|STATE: filled    |
+|ID: 1    |Type: super inode         |SPACE:       4096|STATE: filled    |
+|ID: 2    |Type: allocation map      |SPACE:       4096|STATE: filled    |
+|------------------------------------------------------------------------|
+-rw-rw-r-- 1 mszawerd mszawerd 12288 sty 21 17:57 ./virtual_disk
+DISK LOADED SUCCESSFULLY
+DISK REMOVED SUCCESSFULLY
+ls: cannot access './virtual_disk': No such file or directory
+
+██████████████████████████████████████████████████████████████████████████
+TEST 2 - adding, coping and removing file
+Available blocks: 128
+Max file count: 3872
+Max file size: 516096
+Max data blocks per file: 126
+Max catalog descriptors: 121
+Max files in catalog descriptors: 32
+DISK CREATED SUCCESSFULLY!
+DISK LOADED SUCCESSFULLY
+CATALOG RECORDS BLOCK ADDED SUCCESSFULLY
+FILE "bf.txt" ADDED SUCCESSFULLY AS "test.txt" TO VIRTUAL DISK
+ERROR COPING FILE "bf.txt" AS "test.txt" TO VIRTUAL DISK
+|------------------------------------------------------------------------|
+|ID: 0    |Type: super block         |SPACE:        384|STATE: filled    |
+|ID: 1    |Type: super inode         |SPACE:       4096|STATE: filled    |
+|ID: 2    |Type: allocation map      |SPACE:       4096|STATE: filled    |
+|ID: 3    |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 4    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 5    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 6    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 7    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 8    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 9    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 10   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 11   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 12   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 13   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 14   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 15   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 16   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 17   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 18   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 19   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 20   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 21   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 22   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 23   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 24   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 25   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 26   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 27   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 28   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 29   |Type: data block          |SPACE:       3308|STATE: filled    |
+|------------------------------------------------------------------------|
+CATALOG: "main"
+	- test.txt
+COPIED "test.txt" FROM DISK AS "copied_file.txt"
+FILE "test.txt" REMOVED SUCCESSFULLY
+|------------------------------------------------------------------------|
+|ID: 0    |Type: super block         |SPACE:        384|STATE: filled    |
+|ID: 1    |Type: super inode         |SPACE:       4096|STATE: filled    |
+|ID: 2    |Type: allocation map      |SPACE:       4096|STATE: filled    |
+|ID: 3    |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|------------------------------------------------------------------------|
+CATALOG: "main"
+Files bf.txt and copied_file.txt are identical
+
+██████████████████████████████████████████████████████████████████████████
+TEST 3 - external fragmentation
+DISK LOADED SUCCESSFULLY
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_0.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_1.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_2.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_3.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_4.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_5.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_6.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_7.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_8.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_9.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_10.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_11.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_12.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_13.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_14.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_15.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_16.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_17.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_18.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_19.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_20.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_21.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_22.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_23.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_24.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_25.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_26.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_27.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_28.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_29.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_30.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_31.txt" TO VIRTUAL DISK
+CATALOG RECORDS BLOCK ADDED SUCCESSFULLY
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_32.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_33.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_34.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_35.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_36.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_37.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_38.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_39.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_40.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_41.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_42.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_43.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_44.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_45.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_46.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_47.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_48.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_49.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_50.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_51.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_52.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_53.txt" TO VIRTUAL DISK
+FILE "sf.txt" ADDED SUCCESSFULLY AS "f_54.txt" TO VIRTUAL DISK
+|------------------------------------------------------------------------|
+|ID: 0    |Type: super block         |SPACE:        384|STATE: filled    |
+|ID: 1    |Type: super inode         |SPACE:       4096|STATE: filled    |
+|ID: 2    |Type: allocation map      |SPACE:       4096|STATE: filled    |
+|ID: 3    |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 4    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 5    |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 6    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 7    |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 8    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 9    |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 10   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 11   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 12   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 13   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 14   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 15   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 16   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 17   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 18   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 19   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 20   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 21   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 22   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 23   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 24   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 25   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 26   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 27   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 28   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 29   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 30   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 31   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 32   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 33   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 34   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 35   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 36   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 37   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 38   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 39   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 40   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 41   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 42   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 43   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 44   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 45   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 46   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 47   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 48   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 49   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 50   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 51   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 52   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 53   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 54   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 55   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 56   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 57   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 58   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 59   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 60   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 61   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 62   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 63   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 64   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 65   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 66   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 67   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 68   |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 69   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 70   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 71   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 72   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 73   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 74   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 75   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 76   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 77   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 78   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 79   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 80   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 81   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 82   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 83   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 84   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 85   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 86   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 87   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 88   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 89   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 90   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 91   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 92   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 93   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 94   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 95   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 96   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 97   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 98   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 99   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 100  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 101  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 102  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 103  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 104  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 105  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 106  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 107  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 108  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 109  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 110  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 111  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 112  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 113  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 114  |Type: data block          |SPACE:       4000|STATE: filled    |
+|------------------------------------------------------------------------|
+CATALOG: "main"
+	- f_0.txt
+	- f_1.txt
+	- f_2.txt
+	- f_3.txt
+	- f_4.txt
+	- f_5.txt
+	- f_6.txt
+	- f_7.txt
+	- f_8.txt
+	- f_9.txt
+	- f_10.txt
+	- f_11.txt
+	- f_12.txt
+	- f_13.txt
+	- f_14.txt
+	- f_15.txt
+	- f_16.txt
+	- f_17.txt
+	- f_18.txt
+	- f_19.txt
+	- f_20.txt
+	- f_21.txt
+	- f_22.txt
+	- f_23.txt
+	- f_24.txt
+	- f_25.txt
+	- f_26.txt
+	- f_27.txt
+	- f_28.txt
+	- f_29.txt
+	- f_30.txt
+	- f_31.txt
+	- f_32.txt
+	- f_33.txt
+	- f_34.txt
+	- f_35.txt
+	- f_36.txt
+	- f_37.txt
+	- f_38.txt
+	- f_39.txt
+	- f_40.txt
+	- f_41.txt
+	- f_42.txt
+	- f_43.txt
+	- f_44.txt
+	- f_45.txt
+	- f_46.txt
+	- f_47.txt
+	- f_48.txt
+	- f_49.txt
+	- f_50.txt
+	- f_51.txt
+	- f_52.txt
+	- f_53.txt
+	- f_54.txt
+FILE "f_0.txt" REMOVED SUCCESSFULLY
+FILE "f_2.txt" REMOVED SUCCESSFULLY
+FILE "f_4.txt" REMOVED SUCCESSFULLY
+FILE "f_6.txt" REMOVED SUCCESSFULLY
+FILE "f_8.txt" REMOVED SUCCESSFULLY
+FILE "f_10.txt" REMOVED SUCCESSFULLY
+FILE "f_12.txt" REMOVED SUCCESSFULLY
+FILE "f_14.txt" REMOVED SUCCESSFULLY
+FILE "f_16.txt" REMOVED SUCCESSFULLY
+FILE "f_18.txt" REMOVED SUCCESSFULLY
+FILE "f_20.txt" REMOVED SUCCESSFULLY
+FILE "f_22.txt" REMOVED SUCCESSFULLY
+FILE "f_24.txt" REMOVED SUCCESSFULLY
+FILE "f_26.txt" REMOVED SUCCESSFULLY
+FILE "f_28.txt" REMOVED SUCCESSFULLY
+FILE "f_30.txt" REMOVED SUCCESSFULLY
+FILE "f_32.txt" REMOVED SUCCESSFULLY
+FILE "f_34.txt" REMOVED SUCCESSFULLY
+FILE "f_36.txt" REMOVED SUCCESSFULLY
+FILE "f_38.txt" REMOVED SUCCESSFULLY
+FILE "f_40.txt" REMOVED SUCCESSFULLY
+FILE "f_42.txt" REMOVED SUCCESSFULLY
+FILE "f_44.txt" REMOVED SUCCESSFULLY
+FILE "f_46.txt" REMOVED SUCCESSFULLY
+FILE "f_48.txt" REMOVED SUCCESSFULLY
+FILE "f_50.txt" REMOVED SUCCESSFULLY
+FILE "f_52.txt" REMOVED SUCCESSFULLY
+FILE "f_54.txt" REMOVED SUCCESSFULLY
+|------------------------------------------------------------------------|
+|ID: 0    |Type: super block         |SPACE:        384|STATE: filled    |
+|ID: 1    |Type: super inode         |SPACE:       4096|STATE: filled    |
+|ID: 2    |Type: allocation map      |SPACE:       4096|STATE: filled    |
+|ID: 3    |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 4    |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 5    |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 6    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 7    |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 8    |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 9    |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 10   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 11   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 12   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 13   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 14   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 15   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 16   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 17   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 18   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 19   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 20   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 21   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 22   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 23   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 24   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 25   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 26   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 27   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 28   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 29   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 30   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 31   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 32   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 33   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 34   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 35   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 36   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 37   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 38   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 39   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 40   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 41   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 42   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 43   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 44   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 45   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 46   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 47   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 48   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 49   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 50   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 51   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 52   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 53   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 54   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 55   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 56   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 57   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 58   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 59   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 60   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 61   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 62   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 63   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 64   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 65   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 66   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 67   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 68   |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 69   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 70   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 71   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 72   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 73   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 74   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 75   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 76   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 77   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 78   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 79   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 80   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 81   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 82   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 83   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 84   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 85   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 86   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 87   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 88   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 89   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 90   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 91   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 92   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 93   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 94   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 95   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 96   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 97   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 98   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 99   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 100  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 101  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 102  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 103  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 104  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 105  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 106  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 107  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 108  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 109  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 110  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 111  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 112  |Type: data block          |SPACE:       4000|STATE: filled    |
+|------------------------------------------------------------------------|
+CATALOG: "main"
+	- f_1.txt
+	- f_3.txt
+	- f_5.txt
+	- f_7.txt
+	- f_9.txt
+	- f_11.txt
+	- f_13.txt
+	- f_15.txt
+	- f_17.txt
+	- f_19.txt
+	- f_21.txt
+	- f_23.txt
+	- f_25.txt
+	- f_27.txt
+	- f_29.txt
+	- f_31.txt
+	- f_33.txt
+	- f_35.txt
+	- f_37.txt
+	- f_39.txt
+	- f_41.txt
+	- f_43.txt
+	- f_45.txt
+	- f_47.txt
+	- f_49.txt
+	- f_51.txt
+	- f_53.txt
+FILE "img.png" ADDED SUCCESSFULLY AS "img.png" TO VIRTUAL DISK
+|------------------------------------------------------------------------|
+|ID: 0    |Type: super block         |SPACE:        384|STATE: filled    |
+|ID: 1    |Type: super inode         |SPACE:       4096|STATE: filled    |
+|ID: 2    |Type: allocation map      |SPACE:       4096|STATE: filled    |
+|ID: 3    |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 4    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 5    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 6    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 7    |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 8    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 9    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 10   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 11   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 12   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 13   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 14   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 15   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 16   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 17   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 18   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 19   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 20   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 21   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 22   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 23   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 24   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 25   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 26   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 27   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 28   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 29   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 30   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 31   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 32   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 33   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 34   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 35   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 36   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 37   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 38   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 39   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 40   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 41   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 42   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 43   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 44   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 45   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 46   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 47   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 48   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 49   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 50   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 51   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 52   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 53   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 54   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 55   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 56   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 57   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 58   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 59   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 60   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 61   |Type: data block          |SPACE:       3789|STATE: filled    |
+|ID: 62   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 63   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 64   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 65   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 66   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 67   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 68   |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 69   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 70   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 71   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 72   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 73   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 74   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 75   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 76   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 77   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 78   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 79   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 80   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 81   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 82   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 83   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 84   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 85   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 86   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 87   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 88   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 89   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 90   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 91   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 92   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 93   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 94   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 95   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 96   |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 97   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 98   |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 99   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 100  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 101  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 102  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 103  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 104  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 105  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 106  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 107  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 108  |Type: data block          |SPACE:       4000|STATE: filled    |
+|ID: 109  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 110  |Type: empty block         |SPACE:       4096|STATE: empty     |
+|ID: 111  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 112  |Type: data block          |SPACE:       4000|STATE: filled    |
+|------------------------------------------------------------------------|
+CATALOG: "main"
+	- f_1.txt
+	- f_3.txt
+	- f_5.txt
+	- f_7.txt
+	- f_9.txt
+	- f_11.txt
+	- f_13.txt
+	- f_15.txt
+	- f_17.txt
+	- f_19.txt
+	- f_21.txt
+	- f_23.txt
+	- f_25.txt
+	- f_27.txt
+	- f_29.txt
+	- f_31.txt
+	- img.png
+	- f_33.txt
+	- f_35.txt
+	- f_37.txt
+	- f_39.txt
+	- f_41.txt
+	- f_43.txt
+	- f_45.txt
+	- f_47.txt
+	- f_49.txt
+	- f_51.txt
+	- f_53.txt
+COPIED "img.png" FROM DISK AS "test2.png"
+DISK REMOVED SUCCESSFULLY
+Files img.png and test2.png are identical
+
+██████████████████████████████████████████████████████████████████████████
+TEST 4 - internal fragmentation
+Available blocks: 128
+Max file count: 3872
+Max file size: 516096
+Max data blocks per file: 126
+Max catalog descriptors: 121
+Max files in catalog descriptors: 32
+DISK CREATED SUCCESSFULLY!
+DISK LOADED SUCCESSFULLY
+CATALOG RECORDS BLOCK ADDED SUCCESSFULLY
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_0.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_1.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_2.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_3.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_4.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_5.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_6.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_7.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_8.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_9.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_10.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_11.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_12.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_13.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_14.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_15.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_16.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_17.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_18.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_19.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_20.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_21.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_22.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_23.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_24.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_25.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_26.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_27.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_28.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_29.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_30.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_31.txt" TO VIRTUAL DISK
+CATALOG RECORDS BLOCK ADDED SUCCESSFULLY
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_32.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_33.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_34.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_35.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_36.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_37.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_38.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_39.txt" TO VIRTUAL DISK
+FILE "mf.txt" ADDED SUCCESSFULLY AS "f_40.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_41.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_42.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_43.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_44.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_45.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_46.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_47.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_48.txt" TO VIRTUAL DISK
+ERROR COPING FILE "mf.txt" AS "f_49.txt" TO VIRTUAL DISK
+|------------------------------------------------------------------------|
+|ID: 0    |Type: super block         |SPACE:        384|STATE: filled    |
+|ID: 1    |Type: super inode         |SPACE:       4096|STATE: filled    |
+|ID: 2    |Type: allocation map      |SPACE:       4096|STATE: filled    |
+|ID: 3    |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 4    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 5    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 6    |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 7    |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 8    |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 9    |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 10   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 11   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 12   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 13   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 14   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 15   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 16   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 17   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 18   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 19   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 20   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 21   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 22   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 23   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 24   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 25   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 26   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 27   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 28   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 29   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 30   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 31   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 32   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 33   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 34   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 35   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 36   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 37   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 38   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 39   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 40   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 41   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 42   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 43   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 44   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 45   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 46   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 47   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 48   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 49   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 50   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 51   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 52   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 53   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 54   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 55   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 56   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 57   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 58   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 59   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 60   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 61   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 62   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 63   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 64   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 65   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 66   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 67   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 68   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 69   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 70   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 71   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 72   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 73   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 74   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 75   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 76   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 77   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 78   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 79   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 80   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 81   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 82   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 83   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 84   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 85   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 86   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 87   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 88   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 89   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 90   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 91   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 92   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 93   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 94   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 95   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 96   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 97   |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 98   |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 99   |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 100  |Type: catalog descriptor  |SPACE:       4096|STATE: filled    |
+|ID: 101  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 102  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 103  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 104  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 105  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 106  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 107  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 108  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 109  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 110  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 111  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 112  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 113  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 114  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 115  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 116  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 117  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 118  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 119  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 120  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 121  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 122  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 123  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 124  |Type: data block          |SPACE:          1|STATE: filled    |
+|ID: 125  |Type: inode               |SPACE:       4096|STATE: filled    |
+|ID: 126  |Type: data block          |SPACE:       4096|STATE: filled    |
+|ID: 127  |Type: data block          |SPACE:          1|STATE: filled    |
+|------------------------------------------------------------------------|
+CATALOG: "main"
+	- f_0.txt
+	- f_1.txt
+	- f_2.txt
+	- f_3.txt
+	- f_4.txt
+	- f_5.txt
+	- f_6.txt
+	- f_7.txt
+	- f_8.txt
+	- f_9.txt
+	- f_10.txt
+	- f_11.txt
+	- f_12.txt
+	- f_13.txt
+	- f_14.txt
+	- f_15.txt
+	- f_16.txt
+	- f_17.txt
+	- f_18.txt
+	- f_19.txt
+	- f_20.txt
+	- f_21.txt
+	- f_22.txt
+	- f_23.txt
+	- f_24.txt
+	- f_25.txt
+	- f_26.txt
+	- f_27.txt
+	- f_28.txt
+	- f_29.txt
+	- f_30.txt
+	- f_31.txt
+	- f_32.txt
+	- f_33.txt
+	- f_34.txt
+	- f_35.txt
+	- f_36.txt
+	- f_37.txt
+	- f_38.txt
+	- f_39.txt
+	- f_40.txt
